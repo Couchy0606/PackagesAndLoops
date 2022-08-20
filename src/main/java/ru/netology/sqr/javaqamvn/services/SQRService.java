@@ -1,14 +1,16 @@
 package ru.netology.sqr.javaqamvn.services;
 
 public class SQRService {
+    int i;
+    public int sqrQuantity(int a, int b) {
 
-    public int calcBonus(int amount, boolean isRegistered) {
-        int percent = isRegistered ? 3 : 1;
-        int bonus = amount * percent / 100;
-        if (bonus > 500) {
-            bonus = 500;
+        int sum = 0;
+        for (int i = 10; i < 99; i++) {
+            int pow = (int) Math.pow(i, 2);
+            if (pow > a && pow < b) {
+                sum = sum +1;
+            }
         }
-        return bonus;
-
+        return sum;
     }
 }
